@@ -1,25 +1,22 @@
 package com.app.Models;
 
+import java.util.ArrayList;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+
 @Entity
-public class Personality {
+public class ResFamily {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-	private String type;
+	private String familyname;
+	@OneToMany(mappedBy = "family",cascade = CascadeType.ALL)
+	private ArrayList<Resolution> resolution;
 
-	@OneToMany(mappedBy = "personality", cascade = CascadeType.ALL)
-	private User user;
-	
-	@OneToOne(mappedBy = "personality")
-	private ResHistory history;
-	
-	
 }

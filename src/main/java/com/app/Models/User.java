@@ -27,7 +27,7 @@ public class User {
 	private boolean exerciseRegularly;
 	private String occupation;
 	@OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
-	private List<ResHistory> historyHistories=new ArrayList();
+	private List<ResHistory> historyHistories;
 	
 	
 }
