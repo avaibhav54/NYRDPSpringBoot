@@ -9,12 +9,11 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 @Entity
 public class ResHistory {
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-	@OneToOne
-	private Personality personality;
+	//@OneToOne
+	private int personalityId;
 	private double successRate;
 	@ManyToOne(fetch = FetchType.EAGER)
 	private User user;

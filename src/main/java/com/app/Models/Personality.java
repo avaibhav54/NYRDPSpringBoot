@@ -15,11 +15,11 @@ public class Personality {
 	private int id;
 	private String type;
 
-	@OneToMany(mappedBy = "personality", cascade = CascadeType.ALL)
-	private User user;
+	//@OneToMany(mappedBy = "personality", cascade = CascadeType.ALL)
+	//private User user;
 	
-	@OneToOne(mappedBy = "personality")
-	private ResHistory history;
+	//@OneToOne(mappedBy = "personality")
+	//private ResHistory history;
 	
 	
 }
