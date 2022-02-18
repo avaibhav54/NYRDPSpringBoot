@@ -4,38 +4,42 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-@Table(name = "age_group")
-public class AgeGroup {
+public class SuccessRate {
 
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-	private String gap;
 	
+	private String gap;
+
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getGroup() {
+
+	public String getGap() {
 		return gap;
 	}
-	public void setGroup(String group) {
-		this.gap = group;
+
+	public void setGap(String gap) {
+		this.gap = gap;
 	}
-	public AgeGroup(int id, String group) {
+
+	public SuccessRate(int id, String gap) {
 		super();
 		this.id = id;
-		this.gap = group;
+		this.gap = gap;
 	}
-	public AgeGroup() {
+
+	public SuccessRate() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
 	
 }
