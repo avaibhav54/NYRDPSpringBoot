@@ -18,14 +18,14 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class Question {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "question_sequence")
+	
 	private int id;
 	private String name;
 	@Column(name = "is_option_available")
 	private int isOptionAvailable;
 	private String type;
-	
 	@OneToMany(mappedBy = "question",cascade = CascadeType.ALL)
-	@JsonIgnore
+	
 	private List<Options> options;
 
 	public int getId() {
