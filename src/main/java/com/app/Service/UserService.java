@@ -8,9 +8,9 @@ public interface UserService {
 
 	public User addUser(User user);
 	public ArrayList<User> getUsers();
-	public ArrayList<User> getUserBuAgeGroup(int agegroupid);
-	public ArrayList<User> getUserByGender(String gender);
-	public ArrayList<User> getUserByPersonality(int personalityId);
-	public ArrayList<User> getUserBySleepHabit(String sleepHabit);
+//	public ArrayList<User> getUserBuAgeGroup(int agegroupid);
+//	public ArrayList<User> getUserByGender(String gender);
+//	public ArrayList<User> getUserByPersonality(int personalityId);
+//	public ArrayList<User> getUserBySleepHabit(String sleepHabit);
 	
 }
