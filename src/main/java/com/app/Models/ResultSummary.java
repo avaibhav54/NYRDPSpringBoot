@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 @Entity
 public class ResultSummary {
@@ -11,11 +12,18 @@ public class ResultSummary {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
-	
 	private int resId;
 	private int optionId;
 	private String key;
-	private String value;
+	private double value;
+	@Transient
+	private String optionValue;
+	public String getOptionValue() {
+		return optionValue;
+	}
+	public void setOptionValue(String optionValue) {
+		this.optionValue = optionValue;
+	}
 	public int getId() {
 		return id;
 	}
@@ -40,19 +48,23 @@ public class ResultSummary {
 	public void setKey(String key) {
 		this.key = key;
 	}
-	public String getValue() {
+	public double getValue() {
 		return value;
 	}
-	public void setValue(String value) {
+	public void setValue(Double value) {
 		this.value = value;
 	}
-	public ResultSummary(int id, int resId, int optionId, String key, String value) {
+	public ResultSummary(int id, int resId, int optionId, String key, Double value) {
 		super();
 		this.id = id;
 		this.resId = resId;
 		this.optionId = optionId;
 		this.key = key;
 		this.value = value;
+	}
+	public ResultSummary() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 	
 

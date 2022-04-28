@@ -1,6 +1,7 @@
 package com.app.Service.Impl;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,6 +33,14 @@ public class OptionServiceImpl implements OptionService {
 	public ArrayList<Options> getOptionByQuestion(Question ques) {
 		// TODO Auto-generated method stub
 		return new ArrayList<>(this.optionRepository.findByQuestion(ques));
+	}
+
+	@Override
+	public String getLabelById(int id) {
+		// TODO Auto-generated method stub
+		Optional<Options> findById = this.optionRepository.findById(id);
+		System.out.println(findById);
+		return findById.get().getLabel();
 	}
 
 }

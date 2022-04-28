@@ -32,6 +32,7 @@ public class ResolutionController {
 		Resolution res =this.resolutionService.addResolution(resolution);
 		return ResponseEntity.ok(res);
 		
+		
 	}
 	
 	@GetMapping("/")

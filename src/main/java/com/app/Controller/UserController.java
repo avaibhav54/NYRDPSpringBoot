@@ -31,6 +31,7 @@ public class UserController {
 	@PostMapping("/")
 	public ResponseEntity<?> addUser(@RequestBody User user)
 	{
+		System.out.println(user);
 		
 		return ResponseEntity.ok(this.userService.addUser(user));
 		

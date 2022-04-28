@@ -10,6 +10,5 @@ public interface OptionService {
 	public Options addOptions(Options options);
 	public ArrayList<Options> getOptions();
 	public ArrayList<Options> getOptionByQuestion(Question ques);
-	
-
+	public String getLabelById(int id);
 }
